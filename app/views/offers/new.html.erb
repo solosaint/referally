@@ -1,0 +1,35 @@
+<h1>Make a new offer</h1>
+
+
+<%= form_for :offer, url: offers_path do |f| %>
+  <p>
+    <%= f.label :title %><br>
+    <%= f.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </p>
+
+   <p>
+    <%= f.label :offer_expires_on  %><br>
+    <%= f.text_area :offer_expires_on %>
+  </p>
+  
+   <p>
+    <%= f.label :offer_rules %><br>
+    <%= f.text_area :offer_rules %>
+  </p>
+ 
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
+
+
+<%= form_for :offer, url: offers_path do |f| %>
+  ...
+<% end %>
+ 
+<%= link_to 'Back', offers_path %>

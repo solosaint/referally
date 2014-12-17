@@ -1,0 +1,21 @@
+<h1>Listing offers</h1>
+ 
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+ 
+  <% @offers.each do |offer| %>
+    <tr>
+      <td><%= offer.title %></td>
+      <td><%= offer.description %></td>
+      <td><%= offer.offer_expires_on %></td>
+      <td><%= offer.offer_rules %></td>
+
+    </tr>
+  <% end %>
+</table>
+
+
+<%= link_to 'Make a New Offer', new_offer_path %>
